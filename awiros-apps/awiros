@@ -1,0 +1,154 @@
+#!/bin/bash
+
+AWI_DOCKER_DIR=/home/awiros-docker
+AWI_ENGYN_DIR=awiros-engyn
+AWI_APPS_DIR=awiros-apps
+
+source config 
+
+BLUE='\033[1;94m'
+NC='\033[0m' # No Color
+
+docker_exec(){
+  docker container exec -it -w $AWI_DOCKER_DIR/$AWI_APPS_DIR $docker_container /bin/bash -l -c "$1"
+}
+
+display(){
+  /bin/echo -e "${BLUE}==> $1${NC}"
+}
+
+
+if [ "$1" == "configure" ]
+then
+  display "Initializing .."
+  docker_exec "cmake-js configure"
+  docker_exec 'echo "export AWIROS_NODE_VERSION=$(node -v)" >> /etc/profile'
+  echo "is_initialized=true" >> config
+  display "Complete!"
+fi
+
+
+
+if [ -z "$is_initialized" ]
+then
+  display "Initializing .."
+  docker_exec "cmake-js configure"
+  docker_exec 'echo "export AWIROS_NODE_VERSION=$(node -v)" >> /etc/profile' 
+  display "Installing Node Modules .."
+  docker_exec "npm install"
+  echo "is_initialized=true" >> config
+  display "Complete!"
+fi
+
+if [ "$1" == "cmake" ]
+then
+  shift
+  if [ "$1" == "clean" ]
+  then
+      display "cmake clean"
+      docker_exec "rm -rf build"
+      exit
+  elif [ "$1" == "apps" ]
+  then
+      display "cmake apps"
+      # TODO :: Parsing build options
+      docker_exec "cd apps && rm -rf build && mkdir build && cd build && cmake .."
+      exit
+  fi 
+
+  display "cmake"
+  # Parse build options
+  cmake_args=""
+  while [[ $# -gt 0 ]]
+  do
+    
+    # Make a type check
+    opt="$1"
+    if [ "${opt:0:2}" ==  "-D" ]
+    then
+        cmake_args="$cmake_args $1"
+    fi
+    shift
+  
+  done
+  
+  docker_exec "rm -rf build"
+  docker_exec "mkdir build"
+  docker_exec "cd build && cmake .. $cmake_args"
+
+
+elif [ "$1" == "cmake-clean" ]
+then
+  echo "Depricated command"
+  display "use \"cmake clean\""
+
+elif [ "$1" == "make" ]
+then
+  shift
+  if [ "$1" == "" ]
+  then
+      display "make"
+      docker_exec "cd build && make --jobs=$no_of_cores" 
+  
+  elif [ "$1" ==  "clean"]
+  then
+      display "make clean"
+      docker_exec "cd build && make clean" 
+  elif [ "$1" == "apps" ]
+  then
+      display "make apps"
+      docker_exec "cd apps && cd build && make --jobs=$no_of_cores"
+  fi
+
+
+elif [ "$1" == "make-clean" ]
+then
+  echo "Depricated command"
+  display "use \"make clean\""
+
+elif [ "$1" == "run" ]
+then
+  display "run"
+  shift
+  #TODO: add valgrind option
+  APP_ID=$(cat apps/app-registry.txt | grep $1 | cut -d " " -f1)
+  docker_exec "node $awiros_js $APP_ID" 
+
+elif [ "$1" == "login" ]
+then
+  display "login"
+  docker_exec "/bin/bash" 
+
+elif [ "$1" == "app" ]
+then
+    shift
+    if [ "$1" == "create" ]
+    then
+        display "creating app .."
+        docker_exec "python scripts/app_boilerplate.py"
+
+    elif [ "$1" == "remove" ]
+    then
+        display "removing app .."
+        echo "Implementation pending"
+
+    elif [ "$1" == "list" ]
+    then
+        display "Listing apps .."
+        echo "Implementation pending"
+    
+    elif [ "$1" == "deploy" ]
+    then
+        display "Deploying app .."
+        echo "Implementation pending"
+
+
+    else
+        echo "Did you mean create, remove, list?"
+    fi
+
+else
+  display "default"
+  docker_exec $1 
+
+fi

@@ -1,0 +1,16 @@
+rm config
+config_file=config
+no_of_cores=$(($(awk '/^processor/{n+=1}END{print n}' /proc/cpuinfo)/2))
+echo "no_of_cores=$no_of_cores" >> $config_file 
+
+echo "-------------------------------------------------------------"
+ls node/*js
+read -p "Enter full name of your Awiros_js file : " awiros_js
+echo "awiros_js=$awiros_js" >> $config_file 
+echo "-------------------------------------------------------------"
+
+docker container list |rev|cut -d " " -f 1|rev
+read -p "Enter the name of your Docker container : " docker_container
+echo "docker_container=$docker_container" >> $config_file 
+echo "-------------------------------------------------------------"
+echo "CONFIG COMPLETE"

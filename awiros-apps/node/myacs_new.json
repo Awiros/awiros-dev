@@ -1,0 +1,610 @@
+{
+  "awi_name": "awi_ds",
+  "awi_client_id": 123,
+  "awi_tid":1,
+  "awi_terminal_id":1,
+  "awi_camid":1,
+  "awi_config_id":8,
+  "time_stamp":"2018-03-06T10:35:10UTC",
+  "awi_source" : "engyn",
+  "awi_destination": "terminal backend",
+  "awi_terminal_id":1,
+  "awi_severity": "critical-high-medium-low",
+  "awi_camera":
+  {
+    "awi_name": "awi_camera",
+    "location": "office",
+    "id": 123,
+    "ip_add": "192.168.0.1",
+    "cam_no": 1,
+    "stream_id": 0,
+    "port": 554,
+    "username": "admin",
+    "password": "admin123",
+    "manufacturer": "awi_manu_hikvision",
+    "model": "awi_model_model",
+    "url_proto": "rtsp://<USERNAME>:<PASSWORD>@<IP>:<PORT>/Streaming/Channels/<CAMID>0<STREAMID>",
+    "url": "/home/awiros/engyn/engyn/12mm.mp4",
+    "url": "/home/awiros-tech/sources/engyn/fd.mp4",
+    "url": "/home/awiros-docker/tracking_test_vid.dav",
+    "url": "/home/awiros-tech/sources/engyn/fd.mp4",
+    "url": "rtsp://admin:admin123@192.168.0.59:554/Streaming/Channels/502",
+    "url": "rtsp://admin:admin123@192.168.0.40:554/Streaming/Channels/101",
+    "url": "rtsp://admin:admin123@192.168.0.40:554/Streaming/Channels/101",
+    "url": "/home/awiros-tech/sources/engyn/12mm.mp4",
+    "url": "rtsp://admin:admin123@192.168.0.59:554/Streaming/Channels/101",
+    "url": "test2_frs.mkv",
+    "url": "vehicle1.mp4",
+    "url": "CAM_C_2.avi",
+    "url": "/home/awiros-docker/12mm.mp4",
+    "url": "rtsp://admin:admin123@192.168.0.59:554/Streaming/Channels/901",
+    "url": "/home/awiros-tech/sources/engyn/fd.mp4",
+    "url": "/home/awiros-docker/aband.avi",
+    "url": "/home/awiros-docker/tracking_test_vid.dav",
+    "url": "/home/awiros-docker/highway.mp4",
+    "url": "/home/awiros-docker/engyn/test2_frs.mkv",
+    "url": "rtsp://192.168.0.72:5554/back",
+    "status":true,
+    "width":640,
+    "height":480,
+    "mode": "awi_mode_tcp",
+    "protocol": "awi_proto_rtsp, awi_proto_onvif",
+    "fps":25.1,
+    "physical_props":{
+      "camera_height":12,
+      "vertical_angle":12,
+      "fov_angle":12,
+      "focal_length":3.2,
+      "sensor_size":0.12,
+      "sensor_type":"1/2.8"
+    },
+    "calibration":{
+      "awi_name":"calibration"
+    }
+  },
+  "awi_term": {
+    "valid_until": {
+      "timezone": "UTC",
+      "timestamp": "2019-12-31T18:30:48.000Z",
+      "sec": 48,
+      "min": 30,
+      "hour": 18,
+      "m_day": 31,
+      "month": 12,
+      "year": 2019
+    },
+    "key": "62396874627497304103152638"
+  },
+
+  "awi_frame":{
+    "awi_name": "awi_frame",
+    "seq":1234,
+    "width":640,
+    "height":480,
+    "img":"base64",
+    "image_base64":"base64",
+    "image_url": "url",
+    "channels":3,
+    "frame_intensity_eq": 0.7,
+    "frame_sharpness":0.7,
+    "frame_mask":{
+      "awi_coords":[
+          {
+            "x":0.75,
+            "y":1.0
+          },
+          {
+            "x":1.0,
+            "y":0.25
+          }
+      ]
+    }
+  },
+
+  "awi_app_data":{
+    "awi_name":"awi_app_data",
+    "awi_streaming": true,
+    "awi_app": {
+      "awi_name"        : "awi_app",
+      "awi_app_name"    : "awi_tracking",
+      "awi_app_state"   : "STOP",
+      "awi_app_id"      : 0,
+      "awi_app_credits" : 20,
+      "awi_app_API_key" : "1234567890",
+      "__v":0
+    },
+
+    "awi_app_param": {
+      "awi_name"               :"awi_app_param",
+      "awi_time_frequency"     : 0.1,
+      "awi_time_senstivity"    : 1.0,
+      "awi_space_senstivity_x" : 1.0,
+      "awi_space_senstivity_y" : 1.0
+    },
+
+    "awi_tracker":{
+      "awi_tracker_config":{
+        "awi_dist_range": 0.0375,
+        "awi_time_to_live": 8
+      }
+    },
+
+    "awi_detector":{
+      "awi_detector_config":{
+        "awi_conf": 0.80,
+        "min_size":  {"w_ratio":0.1, "h_ratio":0.1},
+        "max_size":  {"w_ratio":0.2, "h_ratio":0.2},
+        "sharpness": 0.2,
+        "fuzzyness": 0.1
+      }
+    },
+
+    "awi_lines": [ {
+      "awi_name":"awi_line",
+      "awi_id":"123abc",
+      "awi_type" : "polyon COMMENT: Line for 2 points",
+      "awi_label": "userurl-string",
+      "created_date":"2018-08-21T10:30:00.000Z",
+      "active_time": [{"starth":6, "endh":8}, {"starth":10, "endh":23} ],
+      "check_rate": 100022,
+      "awi_severity": "critical-high-medium-low",
+      "awi_coords": [
+                      {
+                        "x":0.0,
+                        "y":0.0
+                      },
+                      {
+                        "x":0.0,
+                        "y":0.0
+                      }
+      ],
+      "awi_state": {
+        "awi_name": "awi_state",
+        "awi_count" : {
+                      "awi_cross_clk": 100,
+                      "awi_cross_aclk": 149
+        },
+        "awi_count_since": "2018-08-21T10:30:00.000Z",
+
+        "awi_blob_data" : [
+              {
+                "awi_id": "awi_123",
+                "awi_direction": "awi_cross_clk"
+              },
+              {
+                "id": 123,
+                "direction": "awi_cross_clk"
+              }
+        ],
+
+        "awi_detect" : ["awi_no_motion", "awi_motion", "awi_change", "awi_watch"],
+        "__v":0
+      },
+      "alert":true,
+      "__v":0 },
+
+      {
+        "awi_name":"awi_line2",
+        "awi_id":"123abc",
+        "awi_type" : "polyon COMMENT: Line for 2 points",
+        "awi_label": "user-string",
+        "created_date":"2018-08-21T10:30:00.000Z",
+        "active_time": [{"starth":6, "endh":8}, {"starth":10, "endh":23} ],
+        "check_rate": 100022,
+        "awi_severity": "critical-high-medium-low",
+        "awi_coords": [
+                        {
+                          "x":0.0,
+                          "y":0.0
+                        },
+                        {
+                          "x":0.0,
+                          "y":0.0
+                        }
+        ],
+        "awi_state": {
+          "awi_name": "awi_state",
+          "awi_count" : {
+                        "awi_cross_clk": 100,
+                        "awi_cross_aclk": 149
+          },
+          "awi_count_since": "2018-08-21T10:30:00.000Z",
+
+          "awi_blob_data" : [
+                {
+                  "awi_id": "awi_123",
+                  "awi_direction": "awi_cross_clk"
+                },
+                {
+                  "id": 123,
+                  "direction": "awi_cross_clk"
+                }
+          ],
+
+          "__v":0
+        },
+        "alert":true,
+        "__v":0 }
+    ],
+
+
+
+    "awi_regions": [
+    {
+      "awi_name":"awi_region",
+      "awi_id":"123abc",
+      "awi_type" : "polyon COMMENT: Line for 2 points",
+      "awi_label": "user-string",
+      "created_date":"2018-08-21T10:30:00.000Z",
+      "awi_coords": [{"x":0.160, "y":0.800},
+      {"x":0.300, "y":0.800},
+      {"x":0.300, "y":0.990},
+      {"x":0.160, "y":0.990}],
+      "active_time": [{"starth":6, "endh":8}, {"starth":10, "endh":23} ],
+      "color":"COMMENT rurled-or-hex color code maybe",
+      "state":"COMMENT change in region state? bg, obj, etc",
+      "awi_state": {
+        "awi_name": "awi_state",
+        "awi_count" : {
+          "awi_cross_clk": 100,
+          "awi_cross_aclk": 149
+        },
+        "awi_count_since": "2018-08-21T10:30:00.000Z",
+
+        "awi_blob_data" : [
+        {
+          "awi_id": "awi_123",
+          "awi_direction": "awi_cross_clk"
+        },
+        {
+          "id": 123,
+          "direction": "awi_cross_clk"
+        }
+        ],
+
+        "__v":0
+      },
+      "check_rate": 100022,
+      "senstivity": 0.112,
+      "awi_severity": "critical-high-medium-low",
+
+      "alert":true,
+      "__v":0
+    },
+    { 
+      "awi_name":"awi_region",
+      "awi_id":"123abc",
+      "awi_type" : "polyon COMMENT: Line for 2 points",
+      "awi_label": "user-string",
+      "created_date":"2018-08-21T10:30:00.000Z",
+      "awi_coords": [{"x":0.320, "y":0.500},
+      {"x":0.400, "y":0.500},
+      {"x":0.400, "y":0.800},
+      {"x":0.320, "y":0.800}], 
+      "active_time": [{"starth":6, "endh":8}, {"starth":10, "endh":23} ],
+      "color":"COMMENT rurled-or-hex color code maybe",
+      "state":"COMMENT change in region state? bg, obj, etc",
+      "awi_state": {
+        "awi_name": "awi_state",
+        "awi_count" : {
+          "awi_cross_clk": 100,
+          "awi_cross_aclk": 149
+        },
+        "awi_count_since": "2018-08-21T10:30:00.000Z",
+
+        "awi_blob_data" : [
+        { 
+          "awi_id": "awi_123",
+          "awi_direction": "awi_cross_clk"
+        },
+        { 
+          "id": 123,
+          "direction": "awi_cross_clk"
+        }
+        ],
+
+        "__v":0
+      },
+      "check_rate": 100022,
+      "senstivity": 0.112,
+      "awi_severity": "critical-high-medium-low",
+
+      "alert":true,
+      "__v":0
+    },
+
+    { 
+      "awi_name":"awi_region",
+      "awi_id":"123abc",
+      "awi_type" : "polyon COMMENT: Line for 2 points",
+      "awi_label": "user-string",
+      "created_date":"2018-08-21T10:30:00.000Z",
+      "awi_coords": [{"x":0.100, "y":0.500},
+      {"x":0.250, "y":0.500},
+      {"x":0.250, "y":0.700},
+      {"x":0.100, "y":0.700}], 
+      "active_time": [{"starth":6, "endh":8}, {"starth":10, "endh":23} ],
+      "color":"COMMENT rurled-or-hex color code maybe",
+      "state":"COMMENT change in region state? bg, obj, etc",
+      "awi_state": {
+        "awi_name": "awi_state",
+        "awi_count" : {
+          "awi_cross_clk": 100,
+          "awi_cross_aclk": 149
+        },
+        "awi_count_since": "2018-08-21T10:30:00.000Z",
+
+        "awi_blob_data" : [
+        { 
+          "awi_id": "awi_123",
+          "awi_direction": "awi_cross_clk"
+        },
+        { 
+          "id": 123,
+          "direction": "awi_cross_clk"
+        }
+        ],
+
+        "__v":0
+      },
+      "check_rate": 100022,
+      "senstivity": 0.112,
+      "awi_severity": "critical-high-medium-low",
+
+      "alert":true,
+      "__v":0
+
+    },
+    {
+      "awi_name":"awi_region",
+      "awi_id":"123abc",
+      "awi_type" : "polyon COMMENT: Line for 2 points",
+      "awi_label": "user-string",
+      "created_date":"2018-08-21T10:30:00.000Z",
+      "awi_coords": [{"x":0.560, "y":0.240},
+      {"x":0.700, "y":0.240},
+      {"x":0.700, "y":0.380},
+      {"x":0.560, "y":0.380}],
+      "active_time": [{"starth":6, "endh":8}, {"starth":10, "endh":23} ],
+      "color":"COMMENT rurled-or-hex color code maybe",
+      "state":"COMMENT change in region state? bg, obj, etc",
+      "awi_state": {
+        "awi_name": "awi_state",
+        "awi_count" : {
+          "awi_cross_clk": 100,
+          "awi_cross_aclk": 149
+        },
+        "awi_count_since": "2018-08-21T10:30:00.000Z",
+
+        "awi_blob_data" : [
+        {
+          "awi_id": "awi_123",
+          "awi_direction": "awi_cross_clk"
+        },
+        {
+          "id": 123,
+          "direction": "awi_cross_clk"
+        }
+        ],
+
+        "__v":0
+      },
+      "check_rate": 100022,
+      "senstivity": 0.112,
+      "awi_severity": "critical-high-medium-low",
+
+      "alert":true,
+      "__v":0
+    },
+    {
+      "awi_name":"awi_region",
+      "awi_id":"123abc",
+      "awi_type" : "polyon COMMENT: Line for 2 points",
+      "awi_label": "user-string",
+      "created_date":"2018-08-21T10:30:00.000Z",
+      "awi_coords": [{"x":0.660, "y":0.700},
+      {"x":0.800, "y":0.700},
+      {"x":0.800, "y":0.980},
+      {"x":0.660, "y":0.980}],
+      "active_time": [{"starth":6, "endh":8}, {"starth":10, "endh":23} ],
+      "color":"COMMENT rurled-or-hex color code maybe",
+      "state":"COMMENT change in region state? bg, obj, etc",
+      "awi_state": {
+        "awi_name": "awi_state",
+        "awi_count" : {
+          "awi_cross_clk": 100,
+          "awi_cross_aclk": 149
+        },
+        "awi_count_since": "2018-08-21T10:30:00.000Z",
+
+        "awi_blob_data" : [
+        {
+          "awi_id": "awi_123",
+          "awi_direction": "awi_cross_clk"
+        },
+        {
+          "id": 123,
+          "direction": "awi_cross_clk"
+        }
+        ],
+
+        "__v":0
+      },
+      "check_rate": 100022,
+      "senstivity": 0.112,
+      "awi_severity": "critical-high-medium-low",
+
+      "alert":true,
+      "__v":0
+    }
+    ],
+
+    "awi_blobs": {
+      "awi_blob_config":{
+        "direction": "in/out/clk/anticlk/",
+        "awi_path":
+        {
+          "speed": 0.1,
+          "motion_variance": 0.1,
+          "dwell_time": 12001,
+          "min_dist": 0.1
+        },
+        "color": ["0xffffff", "0x123456"],
+        "awi_severity": "critical-high-medium-low",
+        "classification":{
+          "status" : true,
+          "awi_classes" : ["awi_class_face", "awi_class_person"],
+          "class" : "awi_face",
+          "custom_class" : "classname",
+          "awi_conf":    0.45,
+          "awi_url_db":    "http://voodoo.awiros.com/facetes/123123ncss?appAPIKey",
+          "awi_blob_db":  [
+          {
+            "awi_class"    :"awi_face",
+            "awi_label"    :"ravi",
+            "awi_id"       : 1234,
+            "awi_subclass" :"staff",
+            "img_url"      :["imgs/ravi/ravi.png"],
+            "imgs"      :["imgs/ravi/ravi.png"],
+            "awi_conf"     :0.12,
+            "awi_severity" :"low",
+            "image_base64" :"base64",
+            "__v":0
+          },
+          {
+            "awi_class"    :"awi_face",
+            "awi_label"    :"piyush",
+            "awi_id"       : 124,
+            "awi_subclass" :"staff",
+            "img_url"      :["imgs/piyush/piyush.png"],
+            "imgs"      :["imgs/piyush/piyush.png"],
+            "awi_conf"     :0.12,
+            "awi_severity": "critical",
+            "image_base64" :"base64",
+            "__v":0
+          },
+          {
+            "awi_class"    :"awi_face",
+            "awi_label"    :"vikram",
+            "awi_id"       : 1245,
+            "awi_subclass" :"staff",
+            "img_url"      :["imgs/vikram/vikram.png"],
+            "imgs"      :["imgs/vikram/vikram.png"],
+            "awi_conf"     :0.12,
+            "awi_severity": "critical",
+            "image_base64" :"base64",
+            "__v":0
+          },
+          {
+            "awi_class"    :"awi_face",
+            "awi_label"    :"nayeem",
+            "awi_id"       : 1246,
+            "awi_subclass" :"staff",
+            "img_url"      :["imgs/nayeem/nayeem.jpg"],
+            "imgs"      :["imgs/nayeem/nayeem.jpg"],
+            "awi_conf"     :0.12,
+            "awi_severity": "critical",
+            "image_base64" :"base64",
+            "__v":0
+          },
+          {
+            "awi_class"    :"awi_face",
+            "awi_label"    :"sid",
+            "awi_id"       : 1249,
+            "awi_subclass" :"staff",
+            "img_url"      :["imgs/sid/sid.png"],
+            "imgs"      :["imgs/sid/sid.png"],
+            "awi_conf"     :0.12,
+            "awi_severity": "critical",
+            "image_base64" :"base64",
+            "__v":0
+          },
+          {
+            "awi_class"    :"awi_face",
+            "awi_label"    :"rushali",
+            "awi_id"       : 1287,
+            "awi_subclass" :"staff",
+            "img_url"      :["imgs/rushali/rushali.jpg"],
+            "imgs"      :["imgs/rushali/rushali.jpg"],
+            "awi_conf"     :0.12,
+            "awi_severity": "critical",
+            "image_base64" :"base64",
+            "__v":0
+          },
+          {
+            "awi_class"    :"awi_face",
+            "awi_label"    :"ashish",
+            "awi_id"       : 1278,
+            "awi_subclass" :"staff",
+            "img_url"      :["imgs/ashish/ashish.jpg"],
+            "imgs"      :["imgs/ashish/ashish.jpg"],
+            "awi_conf"     :0.12,
+            "awi_severity": "critical",
+            "image_base64" :"base64",
+            "__v":0
+          }
+          ],
+          "__v":0
+        },
+        "__v":0
+      },
+      "awi_blob_ids":["awi_123", "awi_1234", "awi_12345"],
+      "awi_blob_labels":["awi_123", "awi_1234", "awi_12345"],
+      "awi_blob_names":["awi_123", "awi_1234", "awi_12345"],
+
+      "awi_123": {
+        "img_base64": "base64",
+        "awi_coords": [
+          {
+            "x":0.1,
+            "y":0.1
+          },
+          {
+            "x":0.2,
+            "y":0.2
+          },
+          {
+            "x":0.2,
+            "y":0.2
+          },
+          {
+            "x":0.3,
+            "y":0.3
+          }
+        ],
+        "classification":{
+          "status" : true,
+          "class-OP" : "awi_face",
+          "custom_class-OP" : "classname",
+          "awi_conf":    0.12,
+          "awi_url_db":    "http://voodoo.awiros.com/facetes/123123ncss?appAPIKey",
+          "awi_max_match_idx": 3,
+          "awi_blob_db":  [
+            {
+              "awi_class"    :"awi_face-awi_npr-awi_object",
+              "awi_label"    :"pankaj",
+              "awi_subclass" :"staff",
+              "img_url"      :["file1.jpg", "file2.jpg","file3.jpg"],
+              "awi_conf"     :0.12,
+              "awi_severity" :"critical-high-medium-low",
+              "image_base64" :"base64",
+              "__v":0
+            },
+            {
+              "awi_class"    :"awi_face-awi_npr-awi_object",
+              "awi_label"    :"pankaj",
+              "awi_subclass" :"staff",
+              "img_url"      :["file1.jpg", "file2.jpg","file3.jpg"],
+              "awi_conf"     :0.12,
+              "awi_severity" :"critical-high-medium-low",
+              "image_base64" :"base64",
+              "__v":0
+            }
+          ],
+          "__v":0
+        }
+      },
+      "__v":0
+    }
+  }
+}

@@ -1,0 +1,181 @@
+{	
+  "awi_name": "awi_ds",
+	"awi_client_id": 123,
+	"awi_tid":1,
+	"awi_camid":1,
+	"awi_config_id":8,
+  "time_stamp":"2018-03-06T10:35:10UTC",
+  "awi_source" : "engyn",
+  "awi_destination": "terminal backend",
+  "awi_camera": 
+  {
+    "awi_name": "awi_camera",
+    "location": "office",
+    "id": 123,
+    "ip_add": "192.168.0.1",
+    "cam_no": 1,
+    "stream_id": 0,
+    "port": 554,
+    "username": "admin",
+    "password": "admin123",
+    "manufacturer": "awi_manu_hikvision",
+    "model": "awi_model_model",
+    "url_proto": "rtsp://<USERNAME>:<PASSWORD>@<IP>:<PORT>/Streaming/Channels/<CAMID>0<STREAMID>",   
+    "url": "/home/awiros-tech/sources/awiros/fd.mp4",   
+    "url": "rtsp://admin:admin123@192.168.0.59:554/Streaming/Channels/502",      
+    "url": "/home/awiros_appstore/engyn/hpcl_8.mp4",   
+    "status":true,
+    "width":640,
+    "height":480,
+    "mode": "awi_mode_tcp",
+    "protocol": "awi_proto_rtsp, awi_proto_onvif",
+    "fps":25.1
+  },
+  "awi_frame": 
+  {
+    "seq":1234,
+    "width":640,
+    "height":480,
+    "img":"base64",
+    "channels":3
+  },
+	"awi_image":"ADS_COMMENT: base64 image",
+	"frame_number":12,
+	"awi_entities":[
+		{
+			"awi_app":"awi_frs",
+			"entity":{
+				"id":2,
+				"x_center":10,
+				"y_center":10,
+				"width":200,
+				"height":200,
+				"l_x":10,
+				"l_y":20,
+				"x_actual":20,
+				"y_actual":20,
+				"score":90,
+				"detection_source":"",
+				"entity_type":"bag"
+			},
+			"awi_frs":{
+				"face_id":54,
+				"face_score":90,
+				"face_name":"suman",
+				"face_landmarks":[] 
+			}
+		},
+		{
+			"awi_app":"awi_npr",
+			"entity":{
+				"id":2,
+				"x_center":10,
+				"y_center":10,
+				"width":200,
+				"height":200,
+				"l_x":10,
+				"l_y":20,
+				"x_actual":20,
+				"y_actual":20,
+				"score":90,
+				"detection_source":"",
+				"entity_type":"bag"
+			},
+			"awi_npr" : {
+				"plate_characters":[
+					{
+						"character":"H",
+						"score":96
+					}
+				],
+				"plate_score":95
+			}
+		},
+		{
+			"awi_app":"awi_tampering",
+			"entity":{
+				"id":2,
+				"x_center":10,
+				"y_center":10,
+				"width":200,
+				"height":200,
+				"l_x":10,
+				"l_y":20,
+				"x_actual":20,
+				"y_actual":20,
+				"score":90,
+				"detection_source":"",
+				"entity_type":"bag"
+			},
+			"awi_tampering" : {
+				"status_flag":true,
+				"score":25
+			}
+		},
+		{
+			"awi_app":"awi_classification",
+			"entity":{
+				"id":2,
+				"x_center":10,
+				"y_center":10,
+				"width":200,
+				"height":200,
+				"l_x":10,
+				"l_y":20,
+				"x_actual":20,
+				"y_actual":20,
+				"score":90,
+				"detection_source":"",
+				"entity_type":"bag"
+			},
+			"awi_classification" : {
+				"class_id":5,
+				"class_score":95,
+				"class_name":"Vehicle"
+			}
+		},
+		{
+			"awi_app":"awi_uvss",
+			"entity":{
+				"id":2,
+				"x_center":10,
+				"y_center":10,
+				"width":200,
+				"height":200,
+				"l_x":10,
+				"l_y":20,
+				"x_actual":20,
+				"y_actual":20,
+				"score":90,
+				"detection_source":"",
+				"entity_type":"bag"
+			},
+			"awi_uvss" : {
+				"status_flag":true,
+				"current_image_buffer":"ADS_COMMENT: panaroma image",
+				"current_size":""
+			}
+		},
+		{
+			"awi_app":"awi_tracking",
+			"entity":{
+				"id":2,
+				"x_center":10,
+				"y_center":10,
+				"width":200,
+				"height":200,
+				"l_x":10,
+				"l_y":20,
+				"x_actual":20,
+				"y_actual":20,
+				"score":90,
+				"detection_source":"adsf",
+				"entity_type":"bag"
+			},
+			"awi_tracking" : {
+				"entity_id":5
+			}
+		}
+
+	]
+}

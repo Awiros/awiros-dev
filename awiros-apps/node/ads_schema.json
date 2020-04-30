@@ -1,0 +1,2018 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "awi_name",
+    "awi_client_id",
+    "awi_tid",
+    "awi_terminal_id",
+    "awi_camid",
+    "awi_config_id",
+    "time_stamp",
+    "awi_source",
+    "awi_destination",
+    "awi_severity",
+    "awi_camera",
+    "awi_term",
+    "awi_frame",
+    "awi_app_data"
+  ],
+  "properties": {
+    "awi_name": {
+      "$id": "#/properties/awi_name",
+      "type": "string",
+      "title": "The Awi_name Schema",
+      "default": "",
+      "examples": [
+        "awi_ds"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "awi_client_id": {
+      "$id": "#/properties/awi_client_id",
+      "type": "integer",
+      "title": "The Awi_client_id Schema",
+      "default": 0,
+      "examples": [
+        123
+      ]
+    },
+    "awi_tid": {
+      "$id": "#/properties/awi_tid",
+      "type": "integer",
+      "title": "The Awi_tid Schema",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "awi_terminal_id": {
+      "$id": "#/properties/awi_terminal_id",
+      "type": "integer",
+      "title": "The Awi_terminal_id Schema",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "awi_camid": {
+      "$id": "#/properties/awi_camid",
+      "type": "integer",
+      "title": "The Awi_camid Schema",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "awi_config_id": {
+      "$id": "#/properties/awi_config_id",
+      "type": "integer",
+      "title": "The Awi_config_id Schema",
+      "default": 0,
+      "examples": [
+        8
+      ]
+    },
+    "time_stamp": {
+      "$id": "#/properties/time_stamp",
+      "type": "string",
+      "title": "The Time_stamp Schema",
+      "default": "",
+      "examples": [
+        "2018-03-06T10:35:10UTC"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "awi_source": {
+      "$id": "#/properties/awi_source",
+      "type": "string",
+      "title": "The Awi_source Schema",
+      "default": "",
+      "examples": [
+        "engyn"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "awi_destination": {
+      "$id": "#/properties/awi_destination",
+      "type": "string",
+      "title": "The Awi_destination Schema",
+      "default": "",
+      "examples": [
+        "terminal backend"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "awi_severity": {
+      "$id": "#/properties/awi_severity",
+      "type": "string",
+      "title": "The Awi_severity Schema",
+      "default": "",
+      "examples": [
+        "critical-high-medium-low"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "awi_camera": {
+      "$id": "#/properties/awi_camera",
+      "type": "object",
+      "title": "The Awi_camera Schema",
+      "required": [
+        "awi_name",
+        "location",
+        "id",
+        "ip_add",
+        "cam_no",
+        "stream_id",
+        "port",
+        "username",
+        "password",
+        "manufacturer",
+        "model",
+        "url_proto",
+        "url",
+        "status",
+        "width",
+        "height",
+        "mode",
+        "protocol",
+        "fps"
+      ],
+      "properties": {
+        "awi_name": {
+          "$id": "#/properties/awi_camera/properties/awi_name",
+          "type": "string",
+          "title": "The Awi_name Schema",
+          "default": "",
+          "examples": [
+            "awi_camera"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "location": {
+          "$id": "#/properties/awi_camera/properties/location",
+          "type": "string",
+          "title": "The Location Schema",
+          "default": "",
+          "examples": [
+            "office"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "id": {
+          "$id": "#/properties/awi_camera/properties/id",
+          "type": "integer",
+          "title": "The Id Schema",
+          "default": 0,
+          "examples": [
+            123
+          ]
+        },
+        "ip_add": {
+          "$id": "#/properties/awi_camera/properties/ip_add",
+          "type": "string",
+          "title": "The Ip_add Schema",
+          "default": "",
+          "examples": [
+            "192.168.0.1"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "cam_no": {
+          "$id": "#/properties/awi_camera/properties/cam_no",
+          "type": "integer",
+          "title": "The Cam_no Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "stream_id": {
+          "$id": "#/properties/awi_camera/properties/stream_id",
+          "type": "integer",
+          "title": "The Stream_id Schema",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        },
+        "port": {
+          "$id": "#/properties/awi_camera/properties/port",
+          "type": "integer",
+          "title": "The Port Schema",
+          "default": 0,
+          "examples": [
+            554
+          ]
+        },
+        "username": {
+          "$id": "#/properties/awi_camera/properties/username",
+          "type": "string",
+          "title": "The Username Schema",
+          "default": "",
+          "examples": [
+            "admin"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "password": {
+          "$id": "#/properties/awi_camera/properties/password",
+          "type": "string",
+          "title": "The Password Schema",
+          "default": "",
+          "examples": [
+            "admin123"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "manufacturer": {
+          "$id": "#/properties/awi_camera/properties/manufacturer",
+          "type": "string",
+          "title": "The Manufacturer Schema",
+          "default": "",
+          "examples": [
+            "awi_manu_hikvision"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "model": {
+          "$id": "#/properties/awi_camera/properties/model",
+          "type": "string",
+          "title": "The Model Schema",
+          "default": "",
+          "examples": [
+            "awi_model_model"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "url_proto": {
+          "$id": "#/properties/awi_camera/properties/url_proto",
+          "type": "string",
+          "title": "The Url_proto Schema",
+          "default": "",
+          "examples": [
+            "rtsp://<USERNAME>:<PASSWORD>@<IP>:<PORT>/Streaming/Channels/<CAMID>0<STREAMID>"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "url": {
+          "$id": "#/properties/awi_camera/properties/url",
+          "type": "string",
+          "title": "The Url Schema",
+          "default": "",
+          "examples": [
+            "rtsp://admin:admin123@192.168.0.59:554/Streaming/Channels/101"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "status": {
+          "$id": "#/properties/awi_camera/properties/status",
+          "type": "boolean",
+          "title": "The Status Schema",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "width": {
+          "$id": "#/properties/awi_camera/properties/width",
+          "type": "integer",
+          "title": "The Width Schema",
+          "default": 0,
+          "examples": [
+            640
+          ]
+        },
+        "height": {
+          "$id": "#/properties/awi_camera/properties/height",
+          "type": "integer",
+          "title": "The Height Schema",
+          "default": 0,
+          "examples": [
+            480
+          ]
+        },
+        "mode": {
+          "$id": "#/properties/awi_camera/properties/mode",
+          "type": "string",
+          "title": "The Mode Schema",
+          "default": "",
+          "examples": [
+            "awi_mode_tcp"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "protocol": {
+          "$id": "#/properties/awi_camera/properties/protocol",
+          "type": "string",
+          "title": "The Protocol Schema",
+          "default": "",
+          "examples": [
+            "awi_proto_rtsp, awi_proto_onvif"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "fps": {
+          "$id": "#/properties/awi_camera/properties/fps",
+          "type": "number",
+          "title": "The Fps Schema",
+          "default": 0.0,
+          "examples": [
+            25.1
+          ]
+        }
+      }
+    },
+    "awi_term": {
+      "$id": "#/properties/awi_term",
+      "type": "object",
+      "title": "The Awi_term Schema",
+      "required": [
+        "id",
+        "valid_until",
+        "key"
+      ],
+      "properties": {
+        "id": {
+          "$id": "#/properties/awi_term/properties/id",
+          "type": "integer",
+          "title": "The Id Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "valid_until": {
+          "$id": "#/properties/awi_term/properties/valid_until",
+          "type": "object",
+          "title": "The Valid_until Schema",
+          "required": [
+            "timezone",
+            "timestamp",
+            "sec",
+            "min",
+            "hour",
+            "m_day",
+            "month",
+            "year"
+          ],
+          "properties": {
+            "timezone": {
+              "$id": "#/properties/awi_term/properties/valid_until/properties/timezone",
+              "type": "string",
+              "title": "The Timezone Schema",
+              "default": "",
+              "examples": [
+                "UTC"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "timestamp": {
+              "$id": "#/properties/awi_term/properties/valid_until/properties/timestamp",
+              "type": "string",
+              "title": "The Timestamp Schema",
+              "default": "",
+              "examples": [
+                "2018-10-03T06:42:00.000Z"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "sec": {
+              "$id": "#/properties/awi_term/properties/valid_until/properties/sec",
+              "type": "integer",
+              "title": "The Sec Schema",
+              "default": 0,
+              "examples": [
+                0
+              ]
+            },
+            "min": {
+              "$id": "#/properties/awi_term/properties/valid_until/properties/min",
+              "type": "integer",
+              "title": "The Min Schema",
+              "default": 0,
+              "examples": [
+                42
+              ]
+            },
+            "hour": {
+              "$id": "#/properties/awi_term/properties/valid_until/properties/hour",
+              "type": "integer",
+              "title": "The Hour Schema",
+              "default": 0,
+              "examples": [
+                6
+              ]
+            },
+            "m_day": {
+              "$id": "#/properties/awi_term/properties/valid_until/properties/m_day",
+              "type": "integer",
+              "title": "The M_day Schema",
+              "default": 0,
+              "examples": [
+                3
+              ]
+            },
+            "month": {
+              "$id": "#/properties/awi_term/properties/valid_until/properties/month",
+              "type": "integer",
+              "title": "The Month Schema",
+              "default": 0,
+              "examples": [
+                10
+              ]
+            },
+            "year": {
+              "$id": "#/properties/awi_term/properties/valid_until/properties/year",
+              "type": "integer",
+              "title": "The Year Schema",
+              "default": 0,
+              "examples": [
+                2018
+              ]
+            }
+          }
+        },
+        "key": {
+          "$id": "#/properties/awi_term/properties/key",
+          "type": "string",
+          "title": "The Key Schema",
+          "default": "",
+          "examples": [
+            "612637641394597976020237900"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "awi_frame": {
+      "$id": "#/properties/awi_frame",
+      "type": "object",
+      "title": "The Awi_frame Schema",
+      "required": [
+        "awi_name",
+        "seq",
+        "width",
+        "height",
+        "img",
+        "image_base64",
+        "image_url",
+        "channels"
+      ],
+      "properties": {
+        "awi_name": {
+          "$id": "#/properties/awi_frame/properties/awi_name",
+          "type": "string",
+          "title": "The Awi_name Schema",
+          "default": "",
+          "examples": [
+            "awi_frame"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "seq": {
+          "$id": "#/properties/awi_frame/properties/seq",
+          "type": "integer",
+          "title": "The Seq Schema",
+          "default": 0,
+          "examples": [
+            1234
+          ]
+        },
+        "width": {
+          "$id": "#/properties/awi_frame/properties/width",
+          "type": "integer",
+          "title": "The Width Schema",
+          "default": 0,
+          "examples": [
+            640
+          ]
+        },
+        "height": {
+          "$id": "#/properties/awi_frame/properties/height",
+          "type": "integer",
+          "title": "The Height Schema",
+          "default": 0,
+          "examples": [
+            480
+          ]
+        },
+        "img": {
+          "$id": "#/properties/awi_frame/properties/img",
+          "type": "string",
+          "title": "The Img Schema",
+          "default": "",
+          "examples": [
+            "base64"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "image_base64": {
+          "$id": "#/properties/awi_frame/properties/image_base64",
+          "type": "string",
+          "title": "The Image_base64 Schema",
+          "default": "",
+          "examples": [
+            "base64"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "image_url": {
+          "$id": "#/properties/awi_frame/properties/image_url",
+          "type": "string",
+          "title": "The Image_url Schema",
+          "default": "",
+          "examples": [
+            "url"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "channels": {
+          "$id": "#/properties/awi_frame/properties/channels",
+          "type": "integer",
+          "title": "The Channels Schema",
+          "default": 0,
+          "examples": [
+            3
+          ]
+        }
+      }
+    },
+    "awi_app_data": {
+      "$id": "#/properties/awi_app_data",
+      "type": "object",
+      "title": "The Awi_app_data Schema",
+      "required": [
+        "awi_name",
+        "awi_streaming",
+        "awi_app",
+        "aband_time",
+        "threshold",
+        "recheck_time",
+        "awi_lines",
+        "awi_regions",
+        "awi_blobs"
+      ],
+      "properties": {
+        "awi_name": {
+          "$id": "#/properties/awi_app_data/properties/awi_name",
+          "type": "string",
+          "title": "The Awi_name Schema",
+          "default": "",
+          "examples": [
+            "awi_app_data"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "awi_streaming": {
+          "$id": "#/properties/awi_app_data/properties/awi_streaming",
+          "type": "boolean",
+          "title": "The Awi_streaming Schema",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "awi_app": {
+          "$id": "#/properties/awi_app_data/properties/awi_app",
+          "type": "object",
+          "title": "The Awi_app Schema",
+          "required": [
+            "awi_name",
+            "awi_app_name",
+            "awi_app_id",
+            "awi_app_credits",
+            "awi_app_API_key",
+            "__v"
+          ],
+          "properties": {
+            "awi_name": {
+              "$id": "#/properties/awi_app_data/properties/awi_app/properties/awi_name",
+              "type": "string",
+              "title": "The Awi_name Schema",
+              "default": "",
+              "examples": [
+                "awi_app"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "awi_app_name": {
+              "$id": "#/properties/awi_app_data/properties/awi_app/properties/awi_app_name",
+              "type": "string",
+              "title": "The Awi_app_name Schema",
+              "default": "",
+              "examples": [
+                "awi_tracking"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "awi_app_id": {
+              "$id": "#/properties/awi_app_data/properties/awi_app/properties/awi_app_id",
+              "type": "string",
+              "title": "The Awi_app_id Schema",
+              "default": "",
+              "examples": [
+                "123_awiros_frs523"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "awi_app_credits": {
+              "$id": "#/properties/awi_app_data/properties/awi_app/properties/awi_app_credits",
+              "type": "integer",
+              "title": "The Awi_app_credits Schema",
+              "default": 0,
+              "examples": [
+                60
+              ]
+            },
+            "awi_app_API_key": {
+              "$id": "#/properties/awi_app_data/properties/awi_app/properties/awi_app_API_key",
+              "type": "string",
+              "title": "The Awi_app_api_key Schema",
+              "default": "",
+              "examples": [
+                "1234567890"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "__v": {
+              "$id": "#/properties/awi_app_data/properties/awi_app/properties/__v",
+              "type": "integer",
+              "title": "The __v Schema",
+              "default": 0,
+              "examples": [
+                0
+              ]
+            }
+          }
+        },
+        "aband_time": {
+          "$id": "#/properties/awi_app_data/properties/aband_time",
+          "type": "integer",
+          "title": "The Aband_time Schema",
+          "default": 0,
+          "examples": [
+            30
+          ]
+        },
+        "threshold": {
+          "$id": "#/properties/awi_app_data/properties/threshold",
+          "type": "integer",
+          "title": "The Threshold Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "recheck_time": {
+          "$id": "#/properties/awi_app_data/properties/recheck_time",
+          "type": "integer",
+          "title": "The Recheck_time Schema",
+          "default": 0,
+          "examples": [
+            20
+          ]
+        },
+        "awi_lines": {
+          "$id": "#/properties/awi_app_data/properties/awi_lines",
+          "type": "array",
+          "title": "The Awi_lines Schema",
+          "items": {
+            "$id": "#/properties/awi_app_data/properties/awi_lines/items",
+            "type": "object",
+            "title": "The Items Schema",
+            "required": [
+              "awi_name",
+              "awi_id",
+              "awi_type",
+              "awi_label",
+              "created_date",
+              "active_time",
+              "check_rate",
+              "awi_severity",
+              "awi_coords",
+              "awi_state",
+              "alert",
+              "__v"
+            ],
+            "properties": {
+              "awi_name": {
+                "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/awi_name",
+                "type": "string",
+                "title": "The Awi_name Schema",
+                "default": "",
+                "examples": [
+                  "awi_line"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "awi_id": {
+                "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/awi_id",
+                "type": "string",
+                "title": "The Awi_id Schema",
+                "default": "",
+                "examples": [
+                  "123abc"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "awi_type": {
+                "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/awi_type",
+                "type": "string",
+                "title": "The Awi_type Schema",
+                "default": "",
+                "examples": [
+                  "polyon COMMENT: Line for 2 points"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "awi_label": {
+                "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/awi_label",
+                "type": "string",
+                "title": "The Awi_label Schema",
+                "default": "",
+                "examples": [
+                  "userurl-string"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "created_date": {
+                "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/created_date",
+                "type": "string",
+                "title": "The Created_date Schema",
+                "default": "",
+                "examples": [
+                  "2018-08-21T10:30:00.000Z"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "active_time": {
+                "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/active_time",
+                "type": "array",
+                "title": "The Active_time Schema",
+                "items": {
+                  "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/active_time/items",
+                  "type": "object",
+                  "title": "The Items Schema",
+                  "required": [
+                    "starth",
+                    "endh"
+                  ],
+                  "properties": {
+                    "starth": {
+                      "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/active_time/items/properties/starth",
+                      "type": "integer",
+                      "title": "The Starth Schema",
+                      "default": 0,
+                      "examples": [
+                        6
+                      ]
+                    },
+                    "endh": {
+                      "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/active_time/items/properties/endh",
+                      "type": "integer",
+                      "title": "The Endh Schema",
+                      "default": 0,
+                      "examples": [
+                        8
+                      ]
+                    }
+                  }
+                }
+              },
+              "check_rate": {
+                "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/check_rate",
+                "type": "integer",
+                "title": "The Check_rate Schema",
+                "default": 0,
+                "examples": [
+                  100022
+                ]
+              },
+              "awi_severity": {
+                "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/awi_severity",
+                "type": "string",
+                "title": "The Awi_severity Schema",
+                "default": "",
+                "examples": [
+                  "critical"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "awi_coords": {
+                "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/awi_coords",
+                "type": "array",
+                "title": "The Awi_coords Schema",
+                "items": {
+                  "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/awi_coords/items",
+                  "type": "object",
+                  "title": "The Items Schema",
+                  "required": [
+                    "x",
+                    "y"
+                  ],
+                  "properties": {
+                    "x": {
+                      "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/awi_coords/items/properties/x",
+                      "type": "integer",
+                      "title": "The X Schema",
+                      "default": 0,
+                      "examples": [
+                        0
+                      ]
+                    },
+                    "y": {
+                      "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/awi_coords/items/properties/y",
+                      "type": "integer",
+                      "title": "The Y Schema",
+                      "default": 0,
+                      "examples": [
+                        0
+                      ]
+                    }
+                  }
+                }
+              },
+              "awi_state": {
+                "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/awi_state",
+                "type": "object",
+                "title": "The Awi_state Schema",
+                "required": [
+                  "awi_name",
+                  "awi_count",
+                  "awi_count_since",
+                  "awi_blob_data",
+                  "awi_detect",
+                  "__v"
+                ],
+                "properties": {
+                  "awi_name": {
+                    "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/awi_state/properties/awi_name",
+                    "type": "string",
+                    "title": "The Awi_name Schema",
+                    "default": "",
+                    "examples": [
+                      "awi_state"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "awi_count": {
+                    "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/awi_state/properties/awi_count",
+                    "type": "object",
+                    "title": "The Awi_count Schema",
+                    "required": [
+                      "awi_cross_clk",
+                      "awi_cross_aclk"
+                    ],
+                    "properties": {
+                      "awi_cross_clk": {
+                        "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/awi_state/properties/awi_count/properties/awi_cross_clk",
+                        "type": "integer",
+                        "title": "The Awi_cross_clk Schema",
+                        "default": 0,
+                        "examples": [
+                          100
+                        ]
+                      },
+                      "awi_cross_aclk": {
+                        "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/awi_state/properties/awi_count/properties/awi_cross_aclk",
+                        "type": "integer",
+                        "title": "The Awi_cross_aclk Schema",
+                        "default": 0,
+                        "examples": [
+                          149
+                        ]
+                      }
+                    }
+                  },
+                  "awi_count_since": {
+                    "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/awi_state/properties/awi_count_since",
+                    "type": "string",
+                    "title": "The Awi_count_since Schema",
+                    "default": "",
+                    "examples": [
+                      "2018-08-21T10:30:00.000Z"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "awi_blob_data": {
+                    "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/awi_state/properties/awi_blob_data",
+                    "type": "array",
+                    "title": "The Awi_blob_data Schema",
+                    "items": {
+                      "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/awi_state/properties/awi_blob_data/items",
+                      "type": "object",
+                      "title": "The Items Schema",
+                      "required": [
+                        "awi_id",
+                        "awi_direction"
+                      ],
+                      "properties": {
+                        "awi_id": {
+                          "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/awi_state/properties/awi_blob_data/items/properties/awi_id",
+                          "type": "string",
+                          "title": "The Awi_id Schema",
+                          "default": "",
+                          "examples": [
+                            "awi_123"
+                          ],
+                          "pattern": "^(.*)$"
+                        },
+                        "awi_direction": {
+                          "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/awi_state/properties/awi_blob_data/items/properties/awi_direction",
+                          "type": "string",
+                          "title": "The Awi_direction Schema",
+                          "default": "",
+                          "examples": [
+                            "awi_cross_clk"
+                          ],
+                          "pattern": "^(.*)$"
+                        }
+                      }
+                    }
+                  },
+                  "awi_detect": {
+                    "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/awi_state/properties/awi_detect",
+                    "type": "array",
+                    "title": "The Awi_detect Schema",
+                    "items": {
+                      "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/awi_state/properties/awi_detect/items",
+                      "type": "string",
+                      "title": "The Items Schema",
+                      "default": "",
+                      "examples": [
+                        "awi_no_motion",
+                        "awi_motion",
+                        "awi_change",
+                        "awi_watch"
+                      ],
+                      "pattern": "^(.*)$"
+                    }
+                  },
+                  "__v": {
+                    "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/awi_state/properties/__v",
+                    "type": "integer",
+                    "title": "The __v Schema",
+                    "default": 0,
+                    "examples": [
+                      0
+                    ]
+                  }
+                }
+              },
+              "alert": {
+                "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/alert",
+                "type": "boolean",
+                "title": "The Alert Schema",
+                "default": false,
+                "examples": [
+                  true
+                ]
+              },
+              "__v": {
+                "$id": "#/properties/awi_app_data/properties/awi_lines/items/properties/__v",
+                "type": "integer",
+                "title": "The __v Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              }
+            }
+          }
+        },
+        "awi_regions": {
+          "$id": "#/properties/awi_app_data/properties/awi_regions",
+          "type": "array",
+          "title": "The Awi_regions Schema",
+          "items": {
+            "$id": "#/properties/awi_app_data/properties/awi_regions/items",
+            "type": "object",
+            "title": "The Items Schema",
+            "required": [
+              "awi_name",
+              "awi_id",
+              "awi_type",
+              "awi_label",
+              "created_date",
+              "awi_coords",
+              "active_time",
+              "color",
+              "state",
+              "awi_state",
+              "check_rate",
+              "senstivity",
+              "awi_severity",
+              "alert",
+              "__v"
+            ],
+            "properties": {
+              "awi_name": {
+                "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/awi_name",
+                "type": "string",
+                "title": "The Awi_name Schema",
+                "default": "",
+                "examples": [
+                  "awi_region"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "awi_id": {
+                "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/awi_id",
+                "type": "string",
+                "title": "The Awi_id Schema",
+                "default": "",
+                "examples": [
+                  "123abc"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "awi_type": {
+                "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/awi_type",
+                "type": "string",
+                "title": "The Awi_type Schema",
+                "default": "",
+                "examples": [
+                  "polyon COMMENT: Line for 2 points"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "awi_label": {
+                "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/awi_label",
+                "type": "string",
+                "title": "The Awi_label Schema",
+                "default": "",
+                "examples": [
+                  "user-string"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "created_date": {
+                "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/created_date",
+                "type": "string",
+                "title": "The Created_date Schema",
+                "default": "",
+                "examples": [
+                  "2018-08-21T10:30:00.000Z"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "awi_coords": {
+                "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/awi_coords",
+                "type": "array",
+                "title": "The Awi_coords Schema",
+                "items": {
+                  "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/awi_coords/items",
+                  "type": "object",
+                  "title": "The Items Schema",
+                  "required": [
+                    "x",
+                    "y"
+                  ],
+                  "properties": {
+                    "x": {
+                      "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/awi_coords/items/properties/x",
+                      "type": "number",
+                      "title": "The X Schema",
+                      "default": 0.0,
+                      "examples": [
+                        0.325
+                      ]
+                    },
+                    "y": {
+                      "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/awi_coords/items/properties/y",
+                      "type": "number",
+                      "title": "The Y Schema",
+                      "default": 0.0,
+                      "examples": [
+                        0.575
+                      ]
+                    }
+                  }
+                }
+              },
+              "active_time": {
+                "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/active_time",
+                "type": "array",
+                "title": "The Active_time Schema",
+                "items": {
+                  "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/active_time/items",
+                  "type": "object",
+                  "title": "The Items Schema",
+                  "required": [
+                    "starth",
+                    "endh"
+                  ],
+                  "properties": {
+                    "starth": {
+                      "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/active_time/items/properties/starth",
+                      "type": "integer",
+                      "title": "The Starth Schema",
+                      "default": 0,
+                      "examples": [
+                        6
+                      ]
+                    },
+                    "endh": {
+                      "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/active_time/items/properties/endh",
+                      "type": "integer",
+                      "title": "The Endh Schema",
+                      "default": 0,
+                      "examples": [
+                        8
+                      ]
+                    }
+                  }
+                }
+              },
+              "color": {
+                "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/color",
+                "type": "string",
+                "title": "The Color Schema",
+                "default": "",
+                "examples": [
+                  "COMMENT rurled-or-hex color code maybe"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "state": {
+                "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/state",
+                "type": "string",
+                "title": "The State Schema",
+                "default": "",
+                "examples": [
+                  "COMMENT change in region state? bg, obj, etc"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "awi_state": {
+                "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/awi_state",
+                "type": "object",
+                "title": "The Awi_state Schema",
+                "required": [
+                  "awi_name",
+                  "awi_count",
+                  "awi_count_since",
+                  "awi_blob_data",
+                  "__v"
+                ],
+                "properties": {
+                  "awi_name": {
+                    "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/awi_state/properties/awi_name",
+                    "type": "string",
+                    "title": "The Awi_name Schema",
+                    "default": "",
+                    "examples": [
+                      "awi_state"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "awi_count": {
+                    "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/awi_state/properties/awi_count",
+                    "type": "object",
+                    "title": "The Awi_count Schema",
+                    "required": [
+                      "awi_cross_clk",
+                      "awi_cross_aclk"
+                    ],
+                    "properties": {
+                      "awi_cross_clk": {
+                        "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/awi_state/properties/awi_count/properties/awi_cross_clk",
+                        "type": "integer",
+                        "title": "The Awi_cross_clk Schema",
+                        "default": 0,
+                        "examples": [
+                          100
+                        ]
+                      },
+                      "awi_cross_aclk": {
+                        "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/awi_state/properties/awi_count/properties/awi_cross_aclk",
+                        "type": "integer",
+                        "title": "The Awi_cross_aclk Schema",
+                        "default": 0,
+                        "examples": [
+                          149
+                        ]
+                      }
+                    }
+                  },
+                  "awi_count_since": {
+                    "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/awi_state/properties/awi_count_since",
+                    "type": "string",
+                    "title": "The Awi_count_since Schema",
+                    "default": "",
+                    "examples": [
+                      "2018-08-21T10:30:00.000Z"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "awi_blob_data": {
+                    "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/awi_state/properties/awi_blob_data",
+                    "type": "array",
+                    "title": "The Awi_blob_data Schema",
+                    "items": {
+                      "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/awi_state/properties/awi_blob_data/items",
+                      "type": "object",
+                      "title": "The Items Schema",
+                      "required": [
+                        "awi_id",
+                        "awi_direction"
+                      ],
+                      "properties": {
+                        "awi_id": {
+                          "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/awi_state/properties/awi_blob_data/items/properties/awi_id",
+                          "type": "string",
+                          "title": "The Awi_id Schema",
+                          "default": "",
+                          "examples": [
+                            "awi_123"
+                          ],
+                          "pattern": "^(.*)$"
+                        },
+                        "awi_direction": {
+                          "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/awi_state/properties/awi_blob_data/items/properties/awi_direction",
+                          "type": "string",
+                          "title": "The Awi_direction Schema",
+                          "default": "",
+                          "examples": [
+                            "awi_cross_clk"
+                          ],
+                          "pattern": "^(.*)$"
+                        }
+                      }
+                    }
+                  },
+                  "__v": {
+                    "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/awi_state/properties/__v",
+                    "type": "integer",
+                    "title": "The __v Schema",
+                    "default": 0,
+                    "examples": [
+                      0
+                    ]
+                  }
+                }
+              },
+              "check_rate": {
+                "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/check_rate",
+                "type": "integer",
+                "title": "The Check_rate Schema",
+                "default": 0,
+                "examples": [
+                  100022
+                ]
+              },
+              "senstivity": {
+                "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/senstivity",
+                "type": "number",
+                "title": "The Senstivity Schema",
+                "default": 0.0,
+                "examples": [
+                  0.112
+                ]
+              },
+              "awi_severity": {
+                "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/awi_severity",
+                "type": "string",
+                "title": "The Awi_severity Schema",
+                "default": "",
+                "examples": [
+                  "high"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "alert": {
+                "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/alert",
+                "type": "boolean",
+                "title": "The Alert Schema",
+                "default": false,
+                "examples": [
+                  true
+                ]
+              },
+              "__v": {
+                "$id": "#/properties/awi_app_data/properties/awi_regions/items/properties/__v",
+                "type": "integer",
+                "title": "The __v Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              }
+            }
+          }
+        },
+        "awi_blobs": {
+          "$id": "#/properties/awi_app_data/properties/awi_blobs",
+          "type": "object",
+          "title": "The Awi_blobs Schema",
+          "required": [
+            "awi_blob_config",
+            "awi_blob_ids",
+            "awi_blob_labels",
+            "awi_blob_names",
+            "awi_123",
+            "__v"
+          ],
+          "properties": {
+            "awi_blob_config": {
+              "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config",
+              "type": "object",
+              "title": "The Awi_blob_config Schema",
+              "required": [
+                "min_size",
+                "max_size",
+                "direction",
+                "awi_path",
+                "color",
+                "awi_detect",
+                "awi_severity",
+                "classification",
+                "__v"
+              ],
+              "properties": {
+                "min_size": {
+                  "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/min_size",
+                  "type": "object",
+                  "title": "The Min_size Schema",
+                  "required": [
+                    "x",
+                    "y"
+                  ],
+                  "properties": {
+                    "x": {
+                      "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/min_size/properties/x",
+                      "type": "number",
+                      "title": "The X Schema",
+                      "default": 0.0,
+                      "examples": [
+                        0.1
+                      ]
+                    },
+                    "y": {
+                      "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/min_size/properties/y",
+                      "type": "number",
+                      "title": "The Y Schema",
+                      "default": 0.0,
+                      "examples": [
+                        0.1
+                      ]
+                    }
+                  }
+                },
+                "max_size": {
+                  "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/max_size",
+                  "type": "object",
+                  "title": "The Max_size Schema",
+                  "required": [
+                    "x",
+                    "y"
+                  ],
+                  "properties": {
+                    "x": {
+                      "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/max_size/properties/x",
+                      "type": "number",
+                      "title": "The X Schema",
+                      "default": 0.0,
+                      "examples": [
+                        0.2
+                      ]
+                    },
+                    "y": {
+                      "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/max_size/properties/y",
+                      "type": "number",
+                      "title": "The Y Schema",
+                      "default": 0.0,
+                      "examples": [
+                        0.2
+                      ]
+                    }
+                  }
+                },
+                "direction": {
+                  "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/direction",
+                  "type": "string",
+                  "title": "The Direction Schema",
+                  "default": "",
+                  "examples": [
+                    "in/out/clk/anticlk/"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "awi_path": {
+                  "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/awi_path",
+                  "type": "object",
+                  "title": "The Awi_path Schema",
+                  "required": [
+                    "speed",
+                    "motion_variance",
+                    "dwell_time"
+                  ],
+                  "properties": {
+                    "speed": {
+                      "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/awi_path/properties/speed",
+                      "type": "number",
+                      "title": "The Speed Schema",
+                      "default": 0.0,
+                      "examples": [
+                        0.1
+                      ]
+                    },
+                    "motion_variance": {
+                      "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/awi_path/properties/motion_variance",
+                      "type": "number",
+                      "title": "The Motion_variance Schema",
+                      "default": 0.0,
+                      "examples": [
+                        0.1
+                      ]
+                    },
+                    "dwell_time": {
+                      "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/awi_path/properties/dwell_time",
+                      "type": "integer",
+                      "title": "The Dwell_time Schema",
+                      "default": 0,
+                      "examples": [
+                        12001
+                      ]
+                    }
+                  }
+                },
+                "color": {
+                  "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/color",
+                  "type": "array",
+                  "title": "The Color Schema",
+                  "items": {
+                    "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/color/items",
+                    "type": "string",
+                    "title": "The Items Schema",
+                    "default": "",
+                    "examples": [
+                      "0xffffff",
+                      "0x123456"
+                    ],
+                    "pattern": "^(.*)$"
+                  }
+                },
+                "awi_detect": {
+                  "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/awi_detect",
+                  "type": "array",
+                  "title": "The Awi_detect Schema",
+                  "items": {
+                    "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/awi_detect/items",
+                    "type": "string",
+                    "title": "The Items Schema",
+                    "default": "",
+                    "examples": [
+                      "awi_detect_bg",
+                      "awi_detect_<class>",
+                      "awi_detect_face",
+                      "awi_detect_numplate"
+                    ],
+                    "pattern": "^(.*)$"
+                  }
+                },
+                "awi_severity": {
+                  "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/awi_severity",
+                  "type": "string",
+                  "title": "The Awi_severity Schema",
+                  "default": "",
+                  "examples": [
+                    "critical-high-medium-low"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "classification": {
+                  "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/classification",
+                  "type": "object",
+                  "title": "The Classification Schema",
+                  "required": [
+                    "status",
+                    "class",
+                    "custom_class",
+                    "awi_conf",
+                    "awi_url_db",
+                    "awi_blob_db",
+                    "__v"
+                  ],
+                  "properties": {
+                    "status": {
+                      "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/classification/properties/status",
+                      "type": "boolean",
+                      "title": "The Status Schema",
+                      "default": false,
+                      "examples": [
+                        true
+                      ]
+                    },
+                    "class": {
+                      "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/classification/properties/class",
+                      "type": "string",
+                      "title": "The Class Schema",
+                      "default": "",
+                      "examples": [
+                        "awi_face"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "custom_class": {
+                      "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/classification/properties/custom_class",
+                      "type": "string",
+                      "title": "The Custom_class Schema",
+                      "default": "",
+                      "examples": [
+                        "classname"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "awi_conf": {
+                      "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/classification/properties/awi_conf",
+                      "type": "number",
+                      "title": "The Awi_conf Schema",
+                      "default": 0.0,
+                      "examples": [
+                        0.12
+                      ]
+                    },
+                    "awi_url_db": {
+                      "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/classification/properties/awi_url_db",
+                      "type": "string",
+                      "title": "The Awi_url_db Schema",
+                      "default": "",
+                      "examples": [
+                        "http://voodoo.awiros.com/facetes/123123ncss?appAPIKey"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "awi_blob_db": {
+                      "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/classification/properties/awi_blob_db",
+                      "type": "array",
+                      "title": "The Awi_blob_db Schema",
+                      "items": {
+                        "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/classification/properties/awi_blob_db/items",
+                        "type": "object",
+                        "title": "The Items Schema",
+                        "required": [
+                          "awi_class",
+                          "awi_label",
+                          "awi_id",
+                          "awi_subclass",
+                          "img_url",
+                          "imgs",
+                          "awi_conf",
+                          "awi_severity",
+                          "image_base64",
+                          "__v"
+                        ],
+                        "properties": {
+                          "awi_class": {
+                            "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/classification/properties/awi_blob_db/items/properties/awi_class",
+                            "type": "string",
+                            "title": "The Awi_class Schema",
+                            "default": "",
+                            "examples": [
+                              "awi_face"
+                            ],
+                            "pattern": "^(.*)$"
+                          },
+                          "awi_label": {
+                            "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/classification/properties/awi_blob_db/items/properties/awi_label",
+                            "type": "string",
+                            "title": "The Awi_label Schema",
+                            "default": "",
+                            "examples": [
+                              "ravi"
+                            ],
+                            "pattern": "^(.*)$"
+                          },
+                          "awi_id": {
+                            "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/classification/properties/awi_blob_db/items/properties/awi_id",
+                            "type": "integer",
+                            "title": "The Awi_id Schema",
+                            "default": 0,
+                            "examples": [
+                              1234
+                            ]
+                          },
+                          "awi_subclass": {
+                            "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/classification/properties/awi_blob_db/items/properties/awi_subclass",
+                            "type": "string",
+                            "title": "The Awi_subclass Schema",
+                            "default": "",
+                            "examples": [
+                              "staff"
+                            ],
+                            "pattern": "^(.*)$"
+                          },
+                          "img_url": {
+                            "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/classification/properties/awi_blob_db/items/properties/img_url",
+                            "type": "array",
+                            "title": "The Img_url Schema",
+                            "items": {
+                              "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/classification/properties/awi_blob_db/items/properties/img_url/items",
+                              "type": "string",
+                              "title": "The Items Schema",
+                              "default": "",
+                              "examples": [
+                                "imgs/ravi1.png",
+                                "imgs/6_1539410224722.jpg"
+                              ],
+                              "pattern": "^(.*)$"
+                            }
+                          },
+                          "imgs": {
+                            "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/classification/properties/awi_blob_db/items/properties/imgs",
+                            "type": "array",
+                            "title": "The Imgs Schema",
+                            "items": {
+                              "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/classification/properties/awi_blob_db/items/properties/imgs/items",
+                              "type": "string",
+                              "title": "The Items Schema",
+                              "default": "",
+                              "examples": [
+                                "imgs/ravi1.png",
+                                "imgs/6_1539410224722.jpg"
+                              ],
+                              "pattern": "^(.*)$"
+                            }
+                          },
+                          "awi_conf": {
+                            "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/classification/properties/awi_blob_db/items/properties/awi_conf",
+                            "type": "number",
+                            "title": "The Awi_conf Schema",
+                            "default": 0.0,
+                            "examples": [
+                              0.12
+                            ]
+                          },
+                          "awi_severity": {
+                            "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/classification/properties/awi_blob_db/items/properties/awi_severity",
+                            "type": "string",
+                            "title": "The Awi_severity Schema",
+                            "default": "",
+                            "examples": [
+                              "low"
+                            ],
+                            "pattern": "^(.*)$"
+                          },
+                          "image_base64": {
+                            "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/classification/properties/awi_blob_db/items/properties/image_base64",
+                            "type": "string",
+                            "title": "The Image_base64 Schema",
+                            "default": "",
+                            "examples": [
+                              "base64"
+                            ],
+                            "pattern": "^(.*)$"
+                          },
+                          "__v": {
+                            "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/classification/properties/awi_blob_db/items/properties/__v",
+                            "type": "integer",
+                            "title": "The __v Schema",
+                            "default": 0,
+                            "examples": [
+                              0
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    "__v": {
+                      "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/classification/properties/__v",
+                      "type": "integer",
+                      "title": "The __v Schema",
+                      "default": 0,
+                      "examples": [
+                        0
+                      ]
+                    }
+                  }
+                },
+                "__v": {
+                  "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_config/properties/__v",
+                  "type": "integer",
+                  "title": "The __v Schema",
+                  "default": 0,
+                  "examples": [
+                    0
+                  ]
+                }
+              }
+            },
+            "awi_blob_ids": {
+              "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_ids",
+              "type": "array",
+              "title": "The Awi_blob_ids Schema",
+              "items": {
+                "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_ids/items",
+                "type": "string",
+                "title": "The Items Schema",
+                "default": "",
+                "examples": [
+                  "awi_123",
+                  "awi_1234",
+                  "awi_12345"
+                ],
+                "pattern": "^(.*)$"
+              }
+            },
+            "awi_blob_labels": {
+              "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_labels",
+              "type": "array",
+              "title": "The Awi_blob_labels Schema",
+              "items": {
+                "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_labels/items",
+                "type": "string",
+                "title": "The Items Schema",
+                "default": "",
+                "examples": [
+                  "awi_123",
+                  "awi_1234",
+                  "awi_12345"
+                ],
+                "pattern": "^(.*)$"
+              }
+            },
+            "awi_blob_names": {
+              "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_names",
+              "type": "array",
+              "title": "The Awi_blob_names Schema",
+              "items": {
+                "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_blob_names/items",
+                "type": "string",
+                "title": "The Items Schema",
+                "default": "",
+                "examples": [
+                  "awi_123",
+                  "awi_1234",
+                  "awi_12345"
+                ],
+                "pattern": "^(.*)$"
+              }
+            },
+            "awi_123": {
+              "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_123",
+              "type": "object",
+              "title": "The Awi_123 Schema",
+              "required": [
+                "img_base64",
+                "awi_coords",
+                "classification"
+              ],
+              "properties": {
+                "img_base64": {
+                  "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_123/properties/img_base64",
+                  "type": "string",
+                  "title": "The Img_base64 Schema",
+                  "default": "",
+                  "examples": [
+                    "base64"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "awi_coords": {
+                  "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_123/properties/awi_coords",
+                  "type": "array",
+                  "title": "The Awi_coords Schema",
+                  "items": {
+                    "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_123/properties/awi_coords/items",
+                    "type": "object",
+                    "title": "The Items Schema",
+                    "required": [
+                      "x",
+                      "y"
+                    ],
+                    "properties": {
+                      "x": {
+                        "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_123/properties/awi_coords/items/properties/x",
+                        "type": "number",
+                        "title": "The X Schema",
+                        "default": 0.0,
+                        "examples": [
+                          0.1
+                        ]
+                      },
+                      "y": {
+                        "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_123/properties/awi_coords/items/properties/y",
+                        "type": "number",
+                        "title": "The Y Schema",
+                        "default": 0.0,
+                        "examples": [
+                          0.1
+                        ]
+                      }
+                    }
+                  }
+                },
+                "classification": {
+                  "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_123/properties/classification",
+                  "type": "object",
+                  "title": "The Classification Schema",
+                  "required": [
+                    "status",
+                    "class-OP",
+                    "custom_class-OP",
+                    "awi_conf",
+                    "awi_url_db",
+                    "awi_max_match_idx",
+                    "awi_blob_db",
+                    "__v"
+                  ],
+                  "properties": {
+                    "status": {
+                      "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_123/properties/classification/properties/status",
+                      "type": "boolean",
+                      "title": "The Status Schema",
+                      "default": false,
+                      "examples": [
+                        true
+                      ]
+                    },
+                    "class-OP": {
+                      "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_123/properties/classification/properties/class-OP",
+                      "type": "string",
+                      "title": "The Class-op Schema",
+                      "default": "",
+                      "examples": [
+                        "awi_face"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "custom_class-OP": {
+                      "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_123/properties/classification/properties/custom_class-OP",
+                      "type": "string",
+                      "title": "The Custom_class-op Schema",
+                      "default": "",
+                      "examples": [
+                        "classname"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "awi_conf": {
+                      "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_123/properties/classification/properties/awi_conf",
+                      "type": "number",
+                      "title": "The Awi_conf Schema",
+                      "default": 0.0,
+                      "examples": [
+                        0.12
+                      ]
+                    },
+                    "awi_url_db": {
+                      "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_123/properties/classification/properties/awi_url_db",
+                      "type": "string",
+                      "title": "The Awi_url_db Schema",
+                      "default": "",
+                      "examples": [
+                        "http://voodoo.awiros.com/facetes/123123ncss?appAPIKey"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "awi_max_match_idx": {
+                      "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_123/properties/classification/properties/awi_max_match_idx",
+                      "type": "integer",
+                      "title": "The Awi_max_match_idx Schema",
+                      "default": 0,
+                      "examples": [
+                        3
+                      ]
+                    },
+                    "awi_blob_db": {
+                      "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_123/properties/classification/properties/awi_blob_db",
+                      "type": "array",
+                      "title": "The Awi_blob_db Schema",
+                      "items": {
+                        "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_123/properties/classification/properties/awi_blob_db/items",
+                        "type": "object",
+                        "title": "The Items Schema",
+                        "required": [
+                          "awi_class",
+                          "awi_label",
+                          "awi_subclass",
+                          "img_url",
+                          "awi_conf",
+                          "awi_severity",
+                          "image_base64",
+                          "__v"
+                        ],
+                        "properties": {
+                          "awi_class": {
+                            "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_123/properties/classification/properties/awi_blob_db/items/properties/awi_class",
+                            "type": "string",
+                            "title": "The Awi_class Schema",
+                            "default": "",
+                            "examples": [
+                              "awi_face-awi_npr-awi_object"
+                            ],
+                            "pattern": "^(.*)$"
+                          },
+                          "awi_label": {
+                            "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_123/properties/classification/properties/awi_blob_db/items/properties/awi_label",
+                            "type": "string",
+                            "title": "The Awi_label Schema",
+                            "default": "",
+                            "examples": [
+                              "pankaj"
+                            ],
+                            "pattern": "^(.*)$"
+                          },
+                          "awi_subclass": {
+                            "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_123/properties/classification/properties/awi_blob_db/items/properties/awi_subclass",
+                            "type": "string",
+                            "title": "The Awi_subclass Schema",
+                            "default": "",
+                            "examples": [
+                              "staff"
+                            ],
+                            "pattern": "^(.*)$"
+                          },
+                          "img_url": {
+                            "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_123/properties/classification/properties/awi_blob_db/items/properties/img_url",
+                            "type": "array",
+                            "title": "The Img_url Schema",
+                            "items": {
+                              "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_123/properties/classification/properties/awi_blob_db/items/properties/img_url/items",
+                              "type": "string",
+                              "title": "The Items Schema",
+                              "default": "",
+                              "examples": [
+                                "file1.jpg",
+                                "file2.jpg",
+                                "file3.jpg"
+                              ],
+                              "pattern": "^(.*)$"
+                            }
+                          },
+                          "awi_conf": {
+                            "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_123/properties/classification/properties/awi_blob_db/items/properties/awi_conf",
+                            "type": "number",
+                            "title": "The Awi_conf Schema",
+                            "default": 0.0,
+                            "examples": [
+                              0.12
+                            ]
+                          },
+                          "awi_severity": {
+                            "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_123/properties/classification/properties/awi_blob_db/items/properties/awi_severity",
+                            "type": "string",
+                            "title": "The Awi_severity Schema",
+                            "default": "",
+                            "examples": [
+                              "critical-high-medium-low"
+                            ],
+                            "pattern": "^(.*)$"
+                          },
+                          "image_base64": {
+                            "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_123/properties/classification/properties/awi_blob_db/items/properties/image_base64",
+                            "type": "string",
+                            "title": "The Image_base64 Schema",
+                            "default": "",
+                            "examples": [
+                              "base64"
+                            ],
+                            "pattern": "^(.*)$"
+                          },
+                          "__v": {
+                            "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_123/properties/classification/properties/awi_blob_db/items/properties/__v",
+                            "type": "integer",
+                            "title": "The __v Schema",
+                            "default": 0,
+                            "examples": [
+                              0
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    "__v": {
+                      "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/awi_123/properties/classification/properties/__v",
+                      "type": "integer",
+                      "title": "The __v Schema",
+                      "default": 0,
+                      "examples": [
+                        0
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "__v": {
+              "$id": "#/properties/awi_app_data/properties/awi_blobs/properties/__v",
+              "type": "integer",
+              "title": "The __v Schema",
+              "default": 0,
+              "examples": [
+                0
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,17 @@
+find_package(CURL)
+if(CURL_FOUND)
+  if(DEBUG)
+    message("-- [DEBUG] curl found INC: ${CURL_INCLUDE_DIR}")
+    message("-- [DEBUG] curl found LIB: ${CURL_LIBRARIES}")
+  endif(DEBUG)
+  target_include_directories(${PROJECT_NAME} PUBLIC ${CURL_INCLUDE_DIRS})
+  target_compile_definitions(${PROJECT_NAME} PRIVATE -DENABLE_CURL) 
+  target_link_libraries(${PROJECT_NAME} ${CURL_LIBRARIES})
+
+else()
+  if(DEBUG)
+    message("-- [DEBUG] CURL REQUIRED BUT NOT FOUND")
+  endif(DEBUG)
+  return()
+endif(CURL_FOUND)
+
