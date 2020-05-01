@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/64395702/80786133-4d87e000-8ba0-11ea-9f09-c10713201b78.png">
+  <img src="https://user-images.githubusercontent.com/64395702/80804469-e46d9000-8bd2-11ea-9932-af17fda35b3f.png">
 </div>
 
 <br/>[Awiros](www.awiros.com) is the ideal mechanism to leverage state-of-the-art Deep Learning Frameworks right from training to development to deployment at  scale. Awiros lets you leverage the science of Computer Vision and Artificial  Intelligence to analyze and interpret videos, converting them into actionable data for various use cases. Awiros seamlessly handles the development of apps to their consumption by the users, with unmatched flexibility and robustness.
