@@ -11,6 +11,7 @@
 - [Getting Started](#getting-started)
   - [Creating Application](#creating-application)
   - [Running Application](#running-application)
+  - [Sample Application](#sample-application)
 
 ## Installation
 ### Pre-Requisite
@@ -89,7 +90,7 @@ line 25: "url": "/home/awiros-docker/awiros-apps/<video-file-name>" OR "<rtsp-ur
 ```
 ./awiros run <application-name>
 ```
-#### Sample Application
+### Sample Application
 - You are already provided with 2 applications.
   - Simple Camera app -- Application to stream video on your browser.
   - Crowd Cownt app -- Application to detect people on the given video and will stream on your browser.
